@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Блог о программировании. Контакты для связи." />
+<meta name="keywords" content="сайт,блог,контакты" />
+<meta name="robots" content="all,follow" />
+<meta name="author" content="GIT_labs" />
+<!-- disable iPhone inital scale -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<title>GIT_Labortory:blog</title>
+
+<!-- main css -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="style_form.css" rel="stylesheet" type="text/css">
+<!-- media queries css -->
+<link href="../media-queries.css" rel="stylesheet" type="text/css">
+
+<!-- html5.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- css3-mediaqueries.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<div id="pagewrap">
+	<header id="header">
+		<hgroup>
+			<h1 id="site-logo"><a href="../index.html">GIT_Labortory</a></h1>
+			<h2 id="site-description">My blog, vc, for fan:)</h2>
+		</hgroup>
+
+		<nav>
+			<ul id="main-nav" class="clearfix">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../projects.html" >Projects</a></li>
+				<li><a href="../papers.html">Papers</a></li>
+				<li><a href="../about.html">About</a> </li>
+				<li><a href="../contacts.html" class="active">Contacts</a></li>
+			</ul>
+			<!-- /#main-nav --> 
+		</nav>
+
+		<form id="searchform">
+			<input type="search" id="s" placeholder="Search">
+		</form>
+
+	</header>
+	<!-- /#header -->
+	
+	<div id="content">
+<a href="../contacts.html">Contacts</a> &rarr;<a href="mail.html">Send Mail</a>&rarr;Send Ok!
+		
+<article>
+ <p>{REPLACER}</p>
+ <p><a href=../contacts.html>Назад</a></p>
+		</article>
+		<!-- /.post -->
+	</div>
+	<!-- /#content --> 
+		
+	<aside id="sidebar">
+
+		<section class="widget">
+			<h4 class="widgettitle">Archives</h4>
+			<ul>
+				<li><a href="#">2016.08</a> (3)</li>
+				<li><a href="#">2016.07</a> (23)</li>
+				<li><a href="#">2016.09</a>(18)</li>
+			</ul>
+		</section>
+		<!-- /.widget -->
+<section class="widget clearfix">			
+<iframe src="https://calendar.google.com/calendar/embed?height=250&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=ru.by%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMinsk" style="width:100%; min-height:200px;" frameborder="0" scrolling="no"></iframe>
+		</section>
+		<!-- /.widget -->
+						
+	</aside>
+	<!-- /#sidebar -->
+
+	<footer id="footer">
+	
+		<p>&copy; by <a href="../index.html">GIT_Laboratory</a></p>
+
+	</footer>	
+</div></body></html>

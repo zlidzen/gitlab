@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Расчет категории он-лайн" />
+<meta name="keywords" content="калькулятор,расчет,категория помещения" />
+<meta name="robots" content="all,follow" />
+<meta name="author" content="GIT_labs" />
+<!-- disable iPhone inital scale -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+ <script type="text/javascript" src="../js/category.js"></script>
+<title>GIT_Labortory:blog</title>
+
+<!-- main css -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+
+<!-- media queries css -->
+<link href="../media-queries.css" rel="stylesheet" type="text/css">
+
+<!-- html5.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- css3-mediaqueries.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div id="pagewrap">
+	<header id="header">
+		<hgroup>
+			<h1 id="site-logo"><a href="../index.html">GIT_Labortory</a></h1>
+			<h2 id="site-description">My blog, vc, for fan:)</h2>
+		</hgroup>
+
+		<nav>
+			<ul id="main-nav" class="clearfix">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../projects.html">Projects</a></li>
+				<li><a href="#" class="active">Papers</a></li>
+				<li><a href="../about.html">About</a> </li>
+				<li><a href="../contacts.html">Contacts</a></li>
+			</ul>
+			<!-- /#main-nav --> 
+		</nav>
+
+		<form id="searchform">
+			<input type="search" id="s" placeholder="Search">
+		</form>
+
+	</header>
+	<!-- /#header -->
+	
+	<div id="content">
+<p><a href="../projects.html">Projects</a> &rarr; Категория помещения</p>
+
+		<article class="post clearfix">
+
+			<header>
+				<h1 class="post-title"><a href="#">Определение пожароопасной категории участка В1-В4, Г1, Г2, Д.</a></h1>
+				<p class="post-meta"><time class="post-date" datetime="2011-05-08" pubdate>сентябрь 21, 2016</time> <em>in </em> <a href="#">Category</a></p>
+			</header>
+<form name="form1">
+<table border="0">
+<tr><td>Площадь участка (S) м<sup>2</sup>.:</td> <td><input placeholder="0" type="number" name="s"></td></tr>
+<tr><td>Минимальное расстояние от поверхности пожарной нагрузки до перекрытия (H) м.:</td> <td><input placeholder="0" type="number" name="h"></td></tr>
+<tr><td>Предельные расстояния между участками (l<sub>пр</sub>) м.:</td> <td><input placeholder="0" type="number" name="l"></td></tr>
+<tr><td>Критическая плотность падающих лучистых потоков (q<sub>кр</sub>) кВт/м<sup>2</sup>.:</td> <td><input placeholder="0" type="number" name="q"></td></tr>
+<tr><td>Количество видов веществ шт.:</td> <td><input placeholder="0" type="number" name="n"></td>
+<td><input placeholder="0" type="button" name="button" value="Вещества" onclick="table_build();" > </td></tr>
+</table>
+<p></p>
+<table id = "matter" >
+<tr><td>N п\п</td><td>Масса вещества, G<sub>i</sub>, кг.:</td><td>Низшая теплота сгорания вещества, Q<sub>i</sub>, МДж/кг.:</td></tr>
+</table>
+<p></p>	
+<p><input placeholder="0" type="button" name="summ" value="Расчет" onclick="calculate();" ></p>
+<p></p>	
+<p id="summ"></p>
+<p id="notific"></p>
+<p>
+<table border = "1">
+<tr><td align="center">Категория помещения</td><td align="center">Характеристика веществ и материалов, находящихся (обращающихся) в помещении</td></tr>
+<tr><td align="center">В1 - В4<br>(пожароопасные)</td><td>ГГ, ЛВЖ, ГЖ и трудногорючие жидкости, твердые горючие и трудногорючие в-ва и материалы (в т.ч. пыли и волокна), в-ва и материалы, способные при взаимодействии с водой, кислородом воздуха или друг с другом взрываться и гореть, при условии, что помещения, в которых они имеются в наличии или обращаются, не относятся к категории А или Б.
+</td></tr>
+<tr><td align="center">Г1</td><td>ГГ, ЛВЖ, ГЖ, твердые горючие в-ва и материалы, которые сжигаются или утилизируются в процессе контролируемого горения в качестве топлива.
+</td></tr>
+<tr><td align="center">Г2</td><td>Негорючие в-ва и материалы в горячем, раскаленном или расплавленном состоянии, процесс обработки которых сопровождается выделением лучистого тепла, искр и пламени.
+</td></tr>
+<tr><td align="center">Д</td><td>Негорючие в-ва и материалы в холодном состоянии, горючие и трудногорючие в-ва и материалы в таком количестве, что удельная пожарная нагрузка на участке их размещения в помещении не превышает 100 МДж/м<sup>2</sup>, а пожарная нагрузка в пределах помещения - 1000 МДж.
+</td></tr>
+<tr><td colspan="2">Примечания:
+<ol>
+<li>К  категории  В4  допускается  относить  помещения (без  проведения  соответствующего  расчета),  в  которых 
+находятся:
+<ul>
+<li>горючие и трудногорючие жидкости с температурой вспышки 120 °С и выше в системах смазки, охлаждения и 
+гидропривода оборудования массой менее 60 кг на единицу оборудования при давлении в системе менее 0,2 МПа, 
+при этом расстояние между оборудованием не нормируется; </li>
+<li>трудногорючие вещества и материалы, строительные материалы группы горючести Г1 в качестве временной 
+пожарной нагрузки. Масса трудногорючих веществ и материалов, строительных материалов группы горючести Г1 
+не  ограничивается  при  условии  отсутствия  в  помещении  иных  горючих  веществ  и  материалов.  При  наличии
+в помещении горючих веществ и материалов расчет производится с учетом полной массы трудногорючих веществ 
+и материалов, строительных материалов группы горючести Г1; </li>
+<li>электрические  кабели  для  запитки технологического  и  инженерного оборудования, приборов  освещения (за 
+исключением маслонаполненных), при этом указанное положение не распространяется на серверные, помещения 
+АТС и аналогичные; </li>
+<li>ГГ (при  условии,  что  помещения,  в  которых  они  имеются  в  наличии  или  обращаются,  согласно  расчету
+не относятся к категории А и отсутствует иная пожарная нагрузка); </li>
+<li>негорючие грузы в горючей упаковке (для помещений класса функциональной пожарной опасности A 5.2), при 
+этом: 
+средства пакетирования (поддоны, подкладной лист и др.) по ГОСТ 21391 не относятся к горючей упаковке и 
+при наличии в их составе горючих веществ и материалов учитываются в качестве временной пожарной нагрузки; 
+горючая упаковка, масса которой превышает 20 % массы негорючих грузов, учитывается в качестве временной 
+пожарной нагрузки; 
+горючая  подстилка  на  полу  в  помещениях  для  содержания  животных,  птиц  и  зверей  в  животноводческих, 
+птицеводческих и звероводческих зданиях, при условии, что величина удельной пожарной нагрузки не превышает 
+100 МДж/м2 (независимо от общей пожарной нагрузки в помещении). </li></ul></li>
+<li>К  категории  Д  допускается  относить  помещения (без  проведения  соответствующего  расчета),  в  которых 
+находятся: 
+<ul>
+<li>предметы мебели на рабочих местах; </li>
+<li>помещения  с  мокрыми  процессами (холодильники  и  холодильные  камеры  с  негорючим  хладагентом, 
+помещения  мойки  и подобные  им  помещения), при  этом  температура  в  холодильниках  и  холодильных  камерах
+не должна превышать 0 <sup>o</sup>С.</li></ul> 
+</li>
+</ol>
+</td></tr>
+</table>
+
+</p>	
+</form>		
+		</article>
+		<!-- /.post -->
+
+	</div>
+	<!-- /#content --> 
+
+	<aside id="sidebar">
+
+		<section class="widget">
+			<h4 class="widgettitle">Archives</h4>
+			<ul>
+				<li><a href="#">2016.08</a> (3)</li>
+				<li><a href="#">2016.07</a> (23)</li>
+				<li><a href="#">2016.09</a>(18)</li>
+			</ul>
+		</section>
+		<!-- /.widget -->
+<section class="widget clearfix">			
+<iframe src="https://calendar.google.com/calendar/embed?height=250&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=ru.by%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMinsk" style="width:100%; min-height:200px;" frameborder="0" scrolling="no"></iframe>
+		</section>
+		<!-- /.widget -->
+						
+	</aside>
+	<!-- /#sidebar -->
+
+	<footer id="footer">
+	
+		<p>&copy; by <a href="#">GIT_Laboratory</a></p>
+
+	</footer>	
+</div></body></html>

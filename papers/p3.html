@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Блог о программировании. Сайт." />
+<meta name="keywords" content="форма HTML,обратная,связь,сделать" />
+<meta name="robots" content="all,follow" />
+<meta name="author" content="GIT_labs" />
+<!-- disable iPhone inital scale -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<title>GIT_Labortory:blog</title>
+
+<!-- main css -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+
+<!-- media queries css -->
+<link href="../media-queries.css" rel="stylesheet" type="text/css">
+
+<!-- html5.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- css3-mediaqueries.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div id="pagewrap">
+	<header id="header">
+		<hgroup>
+			<h1 id="site-logo"><a href="../index.html">GIT_Labortory</a></h1>
+			<h2 id="site-description">My blog, vc, for fan:)</h2>
+		</hgroup>
+
+		<nav>
+			<ul id="main-nav" class="clearfix">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../projects.html">Projects</a></li>
+				<li><a href="#" class="active">Papers</a></li>
+				<li><a href="../about.html">About</a> </li>
+				<li><a href="../contacts.html">Contacts</a></li>
+			</ul>
+			<!-- /#main-nav --> 
+		</nav>
+
+		<form id="searchform">
+			<input type="search" id="s" placeholder="Search">
+		</form>
+
+	</header>
+	<!-- /#header -->
+	
+	<div id="content">
+<p><a href="../papers.html">Papers</a> &rarr; Как сделать рабочую форму обратной связи на сайт?</p>
+
+		<article class="post clearfix">
+
+			<header>
+				<h1 class="post-title"><a href="#">Как сделать рабочую форму обратной связи на сайт?</a></h1>
+				<p class="post-meta"><time class="post-date" datetime="2011-05-08" pubdate>сентябрь 22, 2016</time> <em>in </em> <a href="#">Category</a></p>
+			</header>
+			<p>Я думаю, что с этим вопросом сталкиваются 99.9% самоучек-разработчиков-сайтов-блогов. Вот вроде 5-6 страничек сверстано, между собой ссылочки прописаны, а красивой формы нет. Что же делать, если ваш сайт на голеньком HTML5 и чуть-чуть прикрыт CSS3!?. Сидеть на разных форумах и пытаться понять, что там эти умные дятьки пишут - НЕ ВАРИАНТ! Сам попробовал - разобрался еле-еле. Но, у меня получилось. (Вышло, возможно, костыльно-велосипедное изделие - но рабочее!)</p>
+<p>Первым делом подходим к зеркалу. Нас интерисует ОДНА ПРЯМАЯ рука растущая МАКСИМАЛЬНО БЛИЗКО к шее. На руке должно быть НЕ МЕНЕЕ 2 (двух) пальцев для "Ctrl+C"/"Ctrl+V". Если все есть - вы обречены на успех!</p>
+<p>Далее нас интересует стандартная(любая) html-страничка вашего сайта. Еще нужен макет какой-нибудь готовой формы(в интернете валом, даже конструкторы бесплатные есть). Макет будет представлять кусок html-кода + (важно!) CSS для "красивостей" формы. </p>
+<p>Пример html-кода моей формы:</p>
+<p><code>	
+&lt;div id="w"&gt;<br>
+&lt;h1&gt;Написать письмо !&lt;/h1&gt;<br>
+&lt;form id="contactform" name="contact" method="post" action="scr_mail.php"&gt;<br>
+&lt;p class="note"&gt;&lt;span class="req"&gt;*&lt;/span&gt; Поля со звездочкой обязательны для заполнения&lt;/p&gt;<br>
+&lt;div class="row"&gt;<br>
+&lt;label for="name"&gt;Ваше Имя &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;<br>
+&lt;input type="text" name="name" id="name" class="txt" tabindex="1" placeholder="Стив Джобс" required&gt;<br>
+&lt;/div&gt;<br>
+<br>
+&lt;div class="row"&gt;<br>
+&lt;label for="email"&gt;E-mail Адрес &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;<br>
+&lt;input type="email" name="email" id="email" class="txt" tabindex="2" placeholder=" address@mail.ru" required&gt;<br>
+&lt;/div&gt;<br>
+<br>
+&lt;div class="row"&gt;<br>
+&lt;label for="subject"&gt;Тема &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;<br>
+&lt;input type="text" name="subject" id="subject" class="txt" tabindex="3" placeholder="Тема письма" required&gt;<br>
+&lt;/div&gt;<br>
+<br>
+&lt;div class="row"&gt;<br>
+&lt;label for="message"&gt;Сообщение &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;<br>
+&lt;textarea name="message" id="message" class="txtarea" tabindex="4" required&gt;&lt;/textarea&gt;<br>
+&lt;/div&gt;<br>
+<br>
+&lt;div class="row" align="center"&gt;<br>
+&lt;input type="submit" id="submitbtn" name="submitbtn" tabindex="5" value="Отправить Сообщение"&gt;<br>
+&lt;/div&gt;<br>
+&lt;/form&gt;<br>
+&lt;/div&gt;<br>	
+</code></p>
+<p>Далее идет CSS, который всем управляет. Я, когда добавлял форму на страницу, подключил CSS через отдельный файл и положил этот файл в одном месте со страницей. CSS для формы, конечно можно добавить к остальным стилям, но это будет влиять на скорость загрузки всех страниц, а мы этого не хотим.</p>
+<p><iframe src="../files/style_form.txt" frameborder="0" ></iframe></p>
+<p>Привожу пример во фрейме, потому что очень длинный файл. <a href="../files/style_form.txt" download>Проще скачать и посмотреть.</a> Но возможно ваш CSS будет покороче.</p>
+<p>Теперь нам необходимо подготовить наш шаблон. Это страничка - которую будет видеть пользователь после успешной(или нет) отправки. Для этого, ранее заготовленную страничку(помните? см. выше) вычищаем от контента, а на его место ставим надпись <span class="context">"{REPLACER}"</span> без ковычек, НО с фигурными скобками! Затем сохраняем страницу с расширением <span class="context">.TPL</span>. Все, наш шаблон готов. Переходим к самому сложному. Теперь нам нужен будет php-скрипт. Спокойно! Ничего сложного и заоблочного - все четко и по делу! Я назвал <a href="../files/scr_mail.txt" download>scr_mail.php.</a> "- А наЗачем?" ,- спросите, вы. А затем, что бы письмо отправлялось сразу "с сайта", а не через внутренние программы пользователя! Ну чтоб ПО ФЕНШУЮ ВСЕ! Итак, открыли текстовый редактор и "Ctrl+C" "Ctrl+V":</p>
+<p><code>
+&lt;?php<br>
+$page = file_get_contents('pat.tpl');<br>
+//Если была нажата кнопка ОК,<br>
+//то отправляем письмо и информируем об этом пользователя<br>
+if (isset($_POST['submitbtn']))<br>
+{<br>
+  if ($_POST['name']=='' or $_POST['email']=='' or $_POST['message']=='')<br>
+  {<br>
+    $textReplace = "Вы ввели не все данные";    <br>
+  }<br>
+ else<br>
+ {<br>
+    //Куда будет отправлено письмо<br>
+    $komu="АДРЕС_ВАШЕЙ_ПОЧТЫ";<br>
+    //Тема письма<br>
+    $tema="Вопрос от ".$_POST['name']." ".$_POST['email']." ".$_POST['subject'];<br>
+    //Само письмо<br>
+    $text_pisma=$_POST['message'];<br>
+ <br>
+    //Отправляем письмо<br>
+    mail($komu,$tema,$text_pisma);<br>
+ $textReplace = "Ваш вопрос был отправлен администратору";<br>
+ }<br>
+$page = str_replace('{REPLACER}', $textReplace, $page);<br>
+<br>
+  echo $page;<br>
+    //Выполнять больше нечего, выходим из программы<br>
+    exit;<br>
+}<br>
+?&gt;<br>
+</code></p>
+<p>Не забываем сохранить с расширением <span class="context">.PHP</span> и разместить там же, где лежат html c формой, css и наш шаблон .tpl.</p>
+<p>Обратите внимание на строчку <span class="context">$komu="АДРЕС_ВАШЕЙ_ПОЧТЫ";</span> вместо слов АДРЕС_ВАШЕЙ_ПОЧТЫ нужно написать адрес почты на которую будут приходить письма от восторженных пользователей(Ваш Кэп). Для общего развития посмотрите в гугле, зачем нужны  php-функции <span class="context">file_get_contents('pat.tpl'); isset($_POST['submitbtn']); mail($komu,$tema,$text_pisma); и str_replace('{REPLACER}', $textReplace, $page);</span> будет ОООООООООООчень полезно.</p>
+<p>Также внимательно стоит разобраться, как связаны поля и кнопки формы со скриптом. Внимательно посмотрите на свойство name у input'a в форме и на переменные в скрипте. (Переменные начинаются со знака $). Далее предлогаю схему <span class="context">"Как это работает?"</span></p>
+<figure class="post-image"> 
+				<img src="../images/img7.jpg" /> 
+			</figure>
+<p>Надеюсь все было понятно)))</p>
+		</article>
+		<!-- /.post -->
+	</div>
+	<!-- /#content --> 
+
+	<aside id="sidebar">
+
+		<section class="widget">
+			<h4 class="widgettitle">Archives</h4>
+			<ul>
+				<li><a href="#">2016.08</a> (3)</li>
+				<li><a href="#">2016.07</a> (23)</li>
+				<li><a href="#">2016.09</a>(18)</li>
+			</ul>
+		</section>
+		<!-- /.widget -->
+<section class="widget clearfix">			
+<iframe src="https://calendar.google.com/calendar/embed?height=250&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=ru.by%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMinsk" style="width:100%; min-height:200px;" frameborder="0" scrolling="no"></iframe>
+		</section>
+		<!-- /.widget -->
+						
+	</aside>
+	<!-- /#sidebar -->
+
+	<footer id="footer">
+	
+		<p>&copy; by <a href="#">GIT_Laboratory</a></p>
+
+	</footer>	
+</div></body></html>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>http://gitlab.by/</loc>
+	<lastmod>2016-09-23T21:32:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/projects.html</loc>
+	<lastmod>2016-09-23T21:32:01+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/papers.html</loc>
+	<lastmod>2016-09-23T21:32:02+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/about.html</loc>
+	<lastmod>2016-09-23T21:32:02+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/contacts.html</loc>
+	<lastmod>2016-09-23T21:32:03+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/papers/p3.html</loc>
+	<lastmod>2016-09-23T21:32:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/papers/p1.html</loc>
+	<lastmod>2016-09-23T21:32:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/index.html</loc>
+	<lastmod>2016-09-23T21:32:05+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/papers/p2.html</loc>
+	<lastmod>2016-09-23T21:32:06+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/supports/mail.html</loc>
+	<lastmod>2016-09-23T21:32:07+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/files/style_form.txt</loc>
+	<lastmod>2016-09-23T21:32:08+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://gitlab.by/files/scr_mail.txt</loc>
+	<lastmod>2016-09-23T21:32:08+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>

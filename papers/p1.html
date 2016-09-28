@@ -1,0 +1,154 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Блог о программировании. Bat-файлы." />
+<meta name="keywords" content="разработка,bat,com,взлом,пентагон,шутка" />
+<meta name="robots" content="all,follow" />
+<meta name="author" content="GIT_labs" />
+<!-- disable iPhone inital scale -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<title>GIT_Labortory:blog</title>
+
+<!-- main css -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+
+<!-- media queries css -->
+<link href="../media-queries.css" rel="stylesheet" type="text/css">
+
+<!-- html5.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- css3-mediaqueries.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div id="pagewrap">
+	<header id="header">
+		<hgroup>
+			<h1 id="site-logo"><a href="../index.html">GIT_Labortory</a></h1>
+			<h2 id="site-description">My blog, vc, for fan:)</h2>
+		</hgroup>
+
+		<nav>
+			<ul id="main-nav" class="clearfix">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../projects.html">Projects</a></li>
+				<li><a href="#" class="active">Papers</a></li>
+				<li><a href="../about.html">About</a> </li>
+				<li><a href="../contacts.html">Contacts</a></li>
+			</ul>
+			<!-- /#main-nav --> 
+		</nav>
+
+		<form id="searchform">
+			<input type="search" id="s" placeholder="Search">
+		</form>
+
+	</header>
+	<!-- /#header -->
+	
+	<div id="content">
+<p><a href="../papers.html">Papers</a> &rarr; Как взломать пентагон с домашнего компьютера?</p>
+
+		<article class="post clearfix">
+
+			<header>
+				<h1 class="post-title"><a href="#">Как взломать пентагон с домашнего компьютера?</a></h1>
+				<p class="post-meta"><time class="post-date" datetime="2011-05-08" pubdate>сентябрь 21, 2016</time> <em>in </em> <a href="#">Category</a></p>
+			</header>
+			<p>У Вас бывало так - чего-то хочется, а чего не знаю, но руки чешуться?!
+Так вот! Как на счет создать несколько простых программок используя команднуюстроку Windows. Что нам для этого понадибиться? Достаточно будет стандартного блокнота.
+Создаем обычный файл с расширением ".txt". Открываем его и записываем следующие строки...</p>
+<p><code>
+	setlocal enabledelayedexpansion<br>
+	@echo off<br>
+	color 0A<br>
+</code></p>
+<p>- Первые три строчки определяют временное изменение значений переменных среды в командных файлах Windows, скрывают вывод выполняемых команд, задают цвет фона и текста.</p>
+<p><code>
+:m2<br>
+cls<br>
+echo Подбор пароля к серверу Пентагона...<br>
+echo.<br>
+set j=0</code></p>
+<p>- следующие строчки устанавливают метку перехода программы, очищают экран, вывод пустой строки и объявление переменной...</p>
+<p><code>
+:m1<br>
+set line=<br> 
+for /l %%i in (0,1,36) do ( <br>
+set /a dig=!random!%%3<br>
+if "!dig!"=="2" (set "dig= ")<br>
+set line=!line!!dig! <br>
+) <br>
+echo.%line% <br>
+call :wait<br>
+set /a j=%j%+1<br>
+if %j%==42 (call :pass & call :wait & goto m2)<br>
+goto m1</code></p>
+<p>- Смысл предыдующей записи: получить рандомно значение 0, 1 или 2. Если выпола 2, то заменить ее на пробел.
+Записать в строчку 36 символов (0, 1, " "). Вызвать процедуру "ждать" (для плавного вывода на экран).</p>
+<p><code>
+:wait<br>
+@Echo off<br>
+@echo wscript.Sleep 100>"%temp%\sleep30.vbs" <br>
+cscript //nologo "%temp%\sleep30.vbs" <br>
+del "%temp%\sleep30.vbs"<br>
+exit /b</code></p>
+<p>- Процедура "ожидания" собственной персоной))))</p>
+<p><code>
+:pass<br>
+set b=0<br>
+echo.</code></p>
+<p>- Счетчик символов в пароле сбрасываем на "0".</p>
+<p><code>
+:p1 <br>
+call :wait<br>
+< nul set /p "m=* "<br>
+set /a b=%b%+1<br>
+if %b%==16 (<br>
+echo "Alt + 7" ERROR<br>
+call :wait<br>
+exit /b)<br>
+goto p1</code></p>
+<p>- Вывод пароля на экран. 
+Внимание! После вывода "* * * * * * * * * * * * * * * * *" прозвучит сигнал. Для этого при вводе кода необходимо нажать "Alt + 7". Вот собственно и все! Осталось "Сохранить как.." выбрать кодировку 866(ОЕМ-Русская) и потом заменить расшерение файла с ".txt" на ".bat".<br>
+Уходя с рабочего места, я запускаю этот файлик как заставку.<br>
+Если совсем лень разбираться, то вот <a href="../files/broken5.zip" download="broken5.zip" >скачать.</a></p>
+		</article>
+		<!-- /.post -->
+
+	</div>
+	<!-- /#content --> 
+
+	<aside id="sidebar">
+
+		<section class="widget">
+			<h4 class="widgettitle">Archives</h4>
+			<ul>
+				<li><a href="#">2016.08</a> (3)</li>
+				<li><a href="#">2016.07</a> (23)</li>
+				<li><a href="#">2016.09</a>(18)</li>
+			</ul>
+		</section>
+		<!-- /.widget -->
+<section class="widget clearfix">			
+<iframe src="https://calendar.google.com/calendar/embed?height=250&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=ru.by%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMinsk" style="width:100%; min-height:200px;" frameborder="0" scrolling="no"></iframe>
+		</section>
+		<!-- /.widget -->
+						
+	</aside>
+	<!-- /#sidebar -->
+
+	<footer id="footer">
+	
+		<p>&copy; by <a href="#">GIT_Laboratory</a></p>
+
+	</footer>	
+</div></body></html>
